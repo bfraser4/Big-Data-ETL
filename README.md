@@ -4,39 +4,31 @@ In this assignment, you will put your ETL skills to the test. Many of Amazon's s
 
 This Challenge contains two parts. 
 
-Part 1: Extract two Amazon customer review datasets, transform each dataset into four DataFrames, and load the DataFrames into an RDS instance.
+- Part 1: Extract two Amazon customer review datasets, transform each dataset into four DataFrames, and load the DataFrames into an RDS instance.
 
-Part 2: Extract two Amazon customer review datasets and use either SQL or PySpark to analyze whether reviews from Amazon's Vine program are trustworthy.
+- Part 2: Extract two Amazon customer review datasets and use either SQL or PySpark to analyze whether reviews from Amazon's Vine program are trustworthy.
 
 ## Instructions
 ### Part 1
-Upload the part_one_starter_code.ipynb into Google Colab and create a duplicate of this file.
+1) Upload the part_one_starter_code.ipynb into Google Colab and create a duplicate of this file.
 
-Explore the Amazon Reviews Links to an external site.datasets and pick two datasets to perform ETL.
+2) Explore the Amazon Reviews Links to an external site.datasets and pick two datasets to perform ETL.
 
-Rename each part_one_starter_code.ipynb file according to the dataset you are using. For example, if you are going to use the Video Game reviews Links to an external site.file, rename file, part_one_video_games.ipynb. Repeat the process for the duplicate file you created in Step 2.
+3) Extract the Data
+    - Read in each dataset using the correct header and sep parameters.
+    - Get the number of rows in the dataset.
 
-Extract the Data
+4) Transform the Data
 
-Read in each dataset using the correct header and sep parameters.
+5) For each dataset use the schema.sql file located in the Resources folder of the Starter_Code.zip file to create the four DataFrames as follows:
+    - Create the "review_id_df" DataFrame with the appropriate columns and data types.
+    - Create the "products_df" DataFrame that drops the duplicates in the "product_id" and "product_title columns.
+    - Create the "customers_df" DataFrame that groups the data on the "customer_id" by the number of times a customer reviewed a product.
+    - Create the "vine_df" DataFrame that has the "review_id", "star_rating", "helpful_votes", "total_votes", and "vine" columns.
 
-Get the number of rows in the dataset.
+6) Load the Data into an RDS Instance
 
-Transform the Data
-
-For each dataset use the schema.sql file located in the Resources folder of the Starter_Code.zip file to create the four DataFrames as follows:
-
-Create the "review_id_df" DataFrame with the appropriate columns and data types.
-
-Create the "products_df" DataFrame that drops the duplicates in the "product_id" and "product_title columns.
-
-Create the "customers_df" DataFrame that groups the data on the "customer_id" by the number of times a customer reviewed a product.
-
-Create the "vine_df" DataFrame that has the "review_id", "star_rating", "helpful_votes", "total_votes", and "vine" columns.
-
-Load the Data into an RDS Instance
-
-Export each DataFrame into the RDS instance to create four tables for each dataset.
+7) Export each DataFrame into the RDS instance to create four tables for each dataset.
 
 NOTE
 This process can take up to 10 minutes for each. Ensure that everything is correct before uploading.
