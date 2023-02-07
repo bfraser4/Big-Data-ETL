@@ -1,8 +1,7 @@
 # Big Data ETL - Amazon Customer Reviews 
 
-## Background: In this project, I will put my ETL skills to the test. Many of Amazon's shoppers depend on product reviews to make a purchase. Amazon makes these datasets publicly available. They are quite large and can exceed the capacity of local machines. One dataset alone contains over 1.5 million rows; with over 40 datasets, data analysis can be very demanding on the average local computer. My first goal will be to perform the ETL process completely in the cloud and upload a DataFrame to an RDS instance. My second goal will be to use PySpark or SQL to perform a statistical analysis of selected data. 
-
-- Part 2: Extract two Amazon customer review datasets and use either SQL or PySpark to analyze whether reviews from Amazon's Vine program are trustworthy.
+## Background
+In this project, I will put my ETL skills to the test. Many of Amazon's shoppers depend on product reviews to make a purchase. Amazon makes these datasets publicly available. They are quite large and can exceed the capacity of local machines. One dataset alone contains over 1.5 million rows; with over 40 datasets, data analysis can be very demanding on the average local computer. My first goal will be to perform the ETL process completely in the cloud and upload a DataFrame to an RDS instance. My second goal will be to use PySpark or SQL to perform a statistical analysis of selected data. 
 
 ## Instructions
 ### Part 1 - Extract two Amazon customer review datasets, transform each dataset into four DataFrames, and load the DataFrames into an RDS instance.
@@ -30,7 +29,7 @@
 ![carbon (46)](https://user-images.githubusercontent.com/107604123/217337044-4e89e258-b350-4b50-a9eb-6bdcaee52ed5.png)
 
 
-### Part 2
+### Part 2 - Extract two Amazon customer review datasets and use either SQL or PySpark to analyze whether reviews from Amazon's Vine program are trustworthy.
 In Amazon's Vine program, reviewers receive free products in exchange for reviews. Amazon has several policies to reduce the bias of its Vine reviews 
 
 But are Vine reviews truly trustworthy? Your task is to investigate whether Vine reviews are free of bias. Use either PySpark or, for an extra challenge, SQL to analyze the data.
